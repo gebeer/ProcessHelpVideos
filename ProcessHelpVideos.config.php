@@ -36,33 +36,6 @@ class ProcessHelpVideosConfig extends ModuleConfig
     public function getInputfields()
     {
         $inputfields = parent::getInputfields();
-        // bd($this->descriptionField);
-
-        // $f = $this->modules->get('InputfieldRadios');
-        // $f->attr('name', 'descriptionField');
-        // $f->label = $this->_('Choose a field to use for storing help descriptions');
-        // if(count($this->ckeFields)) :
-        // 	$f->options = $this->ckeFields;
-        // else :
-        //     $f->options = array(0 => "There is no CKE Editor field for video descriptions in the system. This module will install a file field named {$this->descfieldName}");
-        // endif;
-        // $f->value = 0;
-        // $f->optionColumns = 1;
-        // $f->required = true;
-        // $inputfields->add($f);
-
-        // $f = $this->modules->get('InputfieldRadios');
-        // $f->attr('name', 'fileField');
-        // $f->label = $this->_('Choose a field to use for storing help videos');
-        // if(count($this->fileFields)) :
-        // 	$f->options = $this->fileFields;
-        // else :
-        //     $f->options = array(0 => "There is no file field for video files in the system. This module will install a file field named {$this->filefieldName}");
-        // endif;
-        // 	$f->value = 0;
-        // 	$f->optionColumns = 1;
-        // 	$f->required = true;
-        //     $inputfields->add($f);
 
         $f = $this->modules->get('InputfieldMarkup');
         $f->attr('name', 'description');

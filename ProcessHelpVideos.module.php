@@ -302,14 +302,12 @@ class ProcessHelpVideos extends Process implements ConfigurableModule
         }
 
         if (!$templates->get($this->childTemplate)) {
-            bd($fields->get($this->descriptionField));
             $fieldgroup = new \ProcessWire\Fieldgroup;
             $fieldgroup->name = $this->childTemplate;
             $fieldgroup->add($fields->get('title'));
             $fieldgroup->add($fields->get($this->descriptionField));
             $fieldgroup->add($fields->get($this->fileField));
             $fieldgroup->save();
-            bd($fieldgroup);
             $template = new \ProcessWire\Template;
             $template->name = $this->childTemplate;
             $template->setFieldgroup($fieldgroup);
